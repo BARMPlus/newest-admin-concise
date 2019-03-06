@@ -3,13 +3,13 @@
     <el-card class="box-card">
       <div slot="header">
         <a class="link-type link-title" target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/guide/advanced/theme.html">
-          {{ $t('theme.documentation') }}
+          换肤文档
         </a>
       </div>
       <div class="box-item">
-        <span class="field-label">{{ $t('theme.change') }} : </span>
+        <span class="field-label">换肤 : </span>
         <el-switch v-model="theme"/>
-        <code style="margin-top:15px;">{{ $t('theme.tips') }}</code>
+        <code style="margin-top:15px;">Tips: 它区别于 navbar 上的 theme-pick, 是两种不同的换肤方法，各自有不同的应用场景，具体请参考文档。</code>
       </div>
     </el-card>
 
@@ -55,7 +55,7 @@
 
 <script>
 import { toggleClass } from '@/utils'
-import '@/assets/custom-theme/index.css' // the theme changed version element-ui css
+import 'common/custom-theme/index.css' // the theme changed version element-ui css
 
 export default {
   name: 'Theme',

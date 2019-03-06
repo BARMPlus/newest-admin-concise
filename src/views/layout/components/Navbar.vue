@@ -8,15 +8,15 @@
       <template v-if="device!=='mobile'">
         <error-log class="errLog-container right-menu-item"/>
 
-        <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
+        <el-tooltip content="全屏" effect="dark" placement="bottom">
           <screenfull class="screenfull right-menu-item"/>
         </el-tooltip>
 
-        <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
+        <el-tooltip content="布局大小" effect="dark" placement="bottom">
           <size-select class="international right-menu-item"/>
         </el-tooltip>
 
-        <el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">
+        <el-tooltip content="换肤" effect="dark" placement="bottom">
           <theme-picker class="theme-switch right-menu-item"/>
         </el-tooltip>
       </template>
@@ -28,12 +28,10 @@
         </div>
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
-            <el-dropdown-item>
-              {{ $t('navbar.dashboard') }}
-            </el-dropdown-item>
+            <el-dropdown-item>首页</el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
-            <span style="display:block;" @click="logout">{{ $t('navbar.logOut') }}</span>
+            <span style="display:block;" @click="logout">退出登录</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -73,7 +71,6 @@ export default {
     },
     logout() {
       this.$store.dispatch('LogOut').then(() => {
-        console.log(1111)
         location.reload()// In order to re-instantiate the vue-router object to avoid bugs
       })
     }

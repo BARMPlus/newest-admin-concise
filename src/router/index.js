@@ -65,14 +65,14 @@ export const constantRouterMap = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
+        meta: { title: '首页', icon: 'dashboard', noCache: true }
       }
     ]
   }
 ]
 
 export default new Router({
-  // mode: 'history', // require service support
+  // mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
@@ -87,19 +87,7 @@ export const asyncRouterMap = [
         path: 'index',
         component: () => import('@/views/theme/index'),
         name: 'Theme',
-        meta: { title: 'theme', icon: 'theme' }
-      }
-    ]
-  },
-  {
-    path: '/i18n',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/i18n-demo/index'),
-        name: 'I18n',
-        meta: { title: 'i18n', icon: 'international' }
+        meta: { title: '换肤', icon: 'theme' }
       }
     ]
   },
