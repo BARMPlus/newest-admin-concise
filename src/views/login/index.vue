@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { isvalidUsername } from '@/utils/validate'
+import { isvalidUsername } from 'common/js/validate'
 import LangSelect from '@/components/LangSelect'
 import SocialSign from './socialsignin'
 

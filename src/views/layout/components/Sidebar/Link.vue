@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { isExternal } from '@/utils'
+import { isExternal } from 'common/js/tool'
 
 export default {
   props: {

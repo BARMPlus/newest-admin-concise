@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from 'common/js/request'
 
 export function loginByUsername(username, password) {
   return request({

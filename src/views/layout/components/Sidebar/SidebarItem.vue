@@ -36,7 +36,7 @@
 
 <script>
 import path from 'path'
-import { isExternal } from '@/utils'
+import { isExternal } from 'common/js/tool'
 import Item from './Item'
 import AppLink from './Link'
 import FixiOSBug from './FixiOSBug'
